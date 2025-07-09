@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Twój miły generator 💖</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #fff0f5;
+      color: #333;
+      text-align: center;
+      padding: 50px;
+      display: none;
+    }
+    h1 {
+      color: #d63384;
+    }
+    #quote {
+      font-size: 1.5rem;
+      margin: 30px auto;
+      padding: 20px;
+      background: #ffe6f0;
+      border-radius: 12px;
+      width: 80%;
+      max-width: 500px;
+    }
+    button {
+      background-color: #ff69b4;
+      color: white;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #e055a0;
+    }
+  </style>
+</head>
+<body>
+  <h1>💌 Twój miły generator 💌</h1>
+  <div id="quote">Kliknij, by zobaczyć coś miłego :)</div>
+  <button onclick="generateQuote()">Losuj!</button>
+
+  <script>
+    const correctPassword = "Misio123";
+    const password = prompt("Wpisz hasło:");
+
+    if (password === correctPassword) {
+      document.body.style.display = "block";
+    } else {
+      document.write("⛔ Niepoprawne hasło.");
+    }
+
+    const quotes = [
+      "Jesteś moim ulubionym człowiekiem 🥰",
+      "Dziękuję, że jesteś 💛",
+      "Twój uśmiech rozświetla mi dzień 🌞",
+      "Nie ma drugiej takiej osoby jak Ty 💎",
+      "Z Tobą wszystko jest lepsze ✨",
+      "Nawet jak jest ciężko, wiem że damy radę razem 💪",
+      "Jesteś moim spokojem i słońcem jednocześnie 🌼"
+    ];
+
+    function generateQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.getElementById('quote').textContent = quotes[randomIndex];
+    }
+  </script>
+</body>
+</html>
